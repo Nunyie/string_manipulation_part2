@@ -1,0 +1,7 @@
+# Nunyie
+# Mimics the title() function without using it
+statement = input("Please a string in incorrect casing: ")
+
+proper_cased_statement = statement.title()
+
+print(proper_cased_statement)
