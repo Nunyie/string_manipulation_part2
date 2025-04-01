@@ -1,2 +1,29 @@
 # Nunyie
 # Mimics endswith() without using it
+
+def ends_with(input_string, suffix):
+    # Get the length of the suffix
+    suffix_length = len(suffix)
+    
+    # Check if the input string is at least as long as the suffix
+    if len(input_string) < suffix_length:
+        return False
+    
+    # Get the end part of the input string that matches the length of the suffix
+    end_part = input_string[-suffix_length:]
+    
+    # Compare the end part with the suffix
+    return end_part == suffix
+
+# Get user's input for the string and the suffix
+user_input = input("Please enter a string: ")
+suffix_input = input("Please enter the suffix to check: ")
+
+# Call the function to check if the string ends with the specified suffix
+result = ends_with(user_input, suffix_input)
+
+# Show the results
+if result:
+    print(f"The string does ends with '{suffix_input}'.")
+else:
+    print(f"The string does not end with '{suffix_input}'.")
