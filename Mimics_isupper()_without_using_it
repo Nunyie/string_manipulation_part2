@@ -1,3 +1,29 @@
 # Nunyie
 # Mimics isupper() without using it
 # Recycles code from "Mimics_lower()_without_using_it"
+
+def growth_ray(input_string):
+    # Create an empty string to store the result
+    result = ""
+    
+    # Loop through each character in the input string
+    for char in input_string:
+        # Check if the character is an lowercase letter
+        if 'a' <= char <= 'z':
+            # Convert it to uppercase by subtracting 32 to its ASCII value
+            result += chr(ord(char) - 32)
+        else:
+            # If it's not lowercase, just add it to the result
+            result += char
+            
+    return result
+
+# Gets user input
+user_input = input("Please enter a string: ")
+
+# Call's the function and converts it to uppercase
+result = growth_ray(user_input)
+
+# Show the results
+print("Original string:", user_input)
+print("String in uppercase:", result)
