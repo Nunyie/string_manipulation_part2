@@ -1,0 +1,7 @@
+# Nunyie
+# Mimics the swapcase() method without using it
+string = input("Please enter a string: ")
+
+reversed_casing_string = ''.join(char.upper() if char.islower() else char.lower() for char in string)
+
+print(reversed_casing_string)
