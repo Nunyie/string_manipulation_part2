@@ -1,2 +1,24 @@
 # Nunyie
 # Mimics isupper() without using it
+
+def is_big(input_string):
+    # Loop through each character in the input string
+    for char in input_string:
+        # Check if the character is a lowercase letter
+        if 'a' <= char <= 'z':
+            # If a lowercase letter is found, return False
+            return False
+    # If we didn't find any lowercase letters, return True
+    return True
+
+# Get user input for the string
+user_input = input("Please enter a string: ")
+
+# Call the function to check if all characters are uppercase
+result = is_big(user_input)
+
+# Show the results
+if result:
+    print("All characters are uppercase.")
+else:
+    print("Not all characters are uppercase.")
