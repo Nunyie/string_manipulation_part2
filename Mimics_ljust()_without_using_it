@@ -1,0 +1,25 @@
+# Nunyie
+# Mimics the output of ljust() without using it
+def custom_ljust(input_string, width):
+    # Get the current length of the input string
+    current_length = len(input_string)
+    
+    # If the current length is less than the specified width
+    if current_length < width:
+        # Calculate the number of spaces to add
+        spaces_to_add = width - current_length
+        # Add spaces to the end of the string
+        return input_string + ' ' * spaces_to_add
+    else:
+        # If the string is already long enough, return it as is
+        return input_string
+
+# Get user input for the string and the desired width
+user_input = input("Please enter a string: ")
+width_input = int(input("Please enter the desired width: "))
+
+# Call the function to left-justify the string
+result = custom_ljust(user_input, width_input)
+
+# Show the result
+print(f"Left-justified string: '{result}'")
