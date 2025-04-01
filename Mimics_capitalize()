@@ -1,8 +1,16 @@
 # Nunyie
 # Mimics the capitilize() function without using it
-# Recycled code from "Fixes_capitilization_of_letters"
-statement = input("Please a string in incorrect casing: ")
 
-proper_cased_statement = statement.title()
+def custom_capitalize(input_string):
+    if not input_string:  # Check if the string is empty
+        return input_string
+    
+    # Capitalize the first letter and make the rest lowercase
+    first_letter = input_string[0].upper()  # Capitalize the first letter
+    rest_of_string = input_string[1:].lower()  # Convert the rest to lowercase
+    
+    return first_letter + rest_of_string  # Combine both parts
 
-print(proper_cased_statement)
+user_input = input("Enter a string: ")
+result = custom_capitalize(user_input)
+print("Capitalized string:", result)
