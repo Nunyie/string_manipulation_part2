@@ -1,2 +1,22 @@
 # Nunyie
 # Mimicing outputs of removeprefix() without using it
+
+def prefix_remover(input_string, prefix):
+    # Check if the input string starts with the specified prefix
+    if input_string[:len(prefix)] == prefix:
+        # If it does, return the string without the prefix
+        return input_string[len(prefix):]
+    else:
+        # If it doesn't, return the original string
+        return input_string
+
+# Get user input for the string and the prefix
+user_input = input("Please enter a string: ")
+prefix_input = input("Please enter the prefix to remove: ")
+
+# Call the function to remove the prefix
+result = prefix_remover(user_input, prefix_input)
+
+# Show the results
+print("Original string:", user_input)
+print("String after removing prefix:", result)
