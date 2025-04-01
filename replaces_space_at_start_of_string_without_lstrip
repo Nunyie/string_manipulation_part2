@@ -1,0 +1,14 @@
+# Nunyie
+# Replaces the spaces at the start of a string without using lstrip
+
+def remove_leading_spaces(input_string):
+    result = input_string
+    while result.startswith(' '):
+        result = result.replace(' ', '', 1) 
+    return result
+
+user_input = input("Please enter a string: ")
+result = remove_leading_spaces(user_input)
+
+print(f'Original string: "{user_input}"')
+print(f'String after removing leading spaces: "{result}"')
