@@ -1,2 +1,29 @@
 # Nunyie
 # Mimics the output of center() without using it
+def custom_center(input_string, width):
+    # Get the current length of the input string
+    current_length = len(input_string)
+    
+    # If the string is already wide enough, return it
+    if current_length >= width:
+        return input_string
+    
+    # Calculate the total number of spaces needed
+    total_spaces = width - current_length
+    
+    # Calculate left and right spaces
+    left_spaces = total_spaces // 2
+    right_spaces = total_spaces - left_spaces
+    
+    # Create the centered string
+    return ' ' * left_spaces + input_string + ' ' * right_spaces
+
+# Get user input for the string and the desired width
+user_input = input("Please enter a string: ")
+width_input = int(input("Please enter the desired width: "))
+
+# Call the function to center the string
+result = custom_center(user_input, width_input)
+
+# Show the result
+print(f"Centered string: '{result}'")
