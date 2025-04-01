@@ -1,3 +1,8 @@
 # Nunyie
 # Mimics the capitilize() function without using it
 # Recycled code from "Fixes_capitilization_of_letters"
+statement = input("Please a string in incorrect casing: ")
+
+proper_cased_statement = statement.title()
+
+print(proper_cased_statement)
